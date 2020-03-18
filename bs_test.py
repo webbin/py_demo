@@ -3,7 +3,8 @@ from bs4 import BeautifulSoup
 from urllib import request as url_request
 from urllib.request import urlopen, build_opener, ProxyHandler
 from urllib.error import HTTPError, URLError
-
+import requests as request_lib
+from requests.exceptions import SSLError, HTTPError as ReqHttpError
 
 bing_url = 'https://cn.bing.com/images/trending?form=Z9LH'
 
@@ -21,14 +22,32 @@ opener = build_opener(proxy_handler)
 # print(str(r.read()))
 
 
-def custom_proxy_open_url():
-    proxy_host = '127.0.0.1:1087'  # host and port of your proxy
+header = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
+}
 
-    req = url_request.Request('https://google.com')
-    req.set_proxy(proxy_host, 'http')
 
-    response = url_request.urlopen(req)
-    print(response.read().decode('utf8'))
+def get_proxy_response(input_url):
+    proxies = {
+        'http': 'http://127.0.0.1:1087',
+        'https': 'http://127.0.0.1:1087',
+    }
+    session = request_lib.Session()
+    session.proxies = proxies
+    session.headers = header
+    try:
+        res = session.get(input_url)
+    except (ReqHttpError, SSLError) as e:
+        print('error', str(e))
+        return None
+    else:
+        return res
+
+
+def test_google():
+    google_url = 'https://www.google.com'
+    res = get_proxy_response(google_url)
+    print(res.text)
 
 
 def fetch_wall_haven():
@@ -52,7 +71,6 @@ def biao_qing_fetch():
     print('find ', len(result), ' img tag')
 
 
-# custom_proxy_open_url()
 # fetch_wall_haven()
 def start_fetch():
     try:
@@ -65,4 +83,5 @@ def start_fetch():
         print('Done')
 
 
-start_fetch()
+# test_google()
+# start_fetch()

@@ -4,11 +4,12 @@ import requests as request_lib
 from requests.exceptions import SSLError, HTTPError as ReqHttpError
 from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
-from io import open
-import socks
+
+
 header = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
 }
+
 url = "https://www.baidu.com"
 url_google = 'https://google.com'
 Html_Parser = 'html.parser'
@@ -40,8 +41,8 @@ def download_file(download_url):
 
 def get_proxy_response(input_url):
     proxies = {
-        'http': 'socks5://proxy.aqara.com:1080',
-        'https': 'socks5://proxy.aqara.com:1080',
+        'http': 'socks5://127.0.0.1:1086',
+        'https': 'socks5://127.0.0.1:1086',
     }
     session = request_lib.Session()
     session.proxies = proxies
