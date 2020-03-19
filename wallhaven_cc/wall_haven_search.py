@@ -60,5 +60,5 @@ def get_search_param(q: str, categories: str, purity: str, sorting: str, order: 
 
 param_string_ = get_search_param('anime', '010', '100', 'views')
 fetch_url = get_wall_haven_search_url(param_string_)
-datas = send_request_ssr_proxy(fetch_url)
-print(datas)
+# datas = send_request_ssr_proxy(fetch_url)
+# print(datas)
