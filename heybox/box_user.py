@@ -47,7 +47,12 @@ def get_user_info_by_uid(uid):
         print('get user profile failed ')
         return None
     else:
-        return get_user_info_from_result(data)
+        try:
+            info = get_user_info_from_result(data)
+            return info
+        except Exception as e:
+            print('get user info failed, uid = {1} , exception {0}'.format(str(e), uid))
+            return None
 
 
 def get_post_id_list_by_uid(uid):

@@ -41,8 +41,8 @@ def get_user_id_list_from_result(result: dict):
     return user_ids
 
 
-def get_user_id_list_by_post_id(post_id):
-    param = get_header_param(post_id)
+def get_user_id_list_by_post_id(post_id, limit=20, offset=0):
+    param = get_header_param(post_id, limit, offset)
     param_str = request_base.generate_param_string(param)
     fetch_url = request_base.generate_url(link_tree_path, param_str)
     resp = request_base.send_request(fetch_url)
@@ -50,7 +50,7 @@ def get_user_id_list_by_post_id(post_id):
     # print(json.dumps(data))
     if data is None:
         print('get user ids response is none')
-        return None
+        return []
     else:
         return get_user_id_list_from_result(data)
 
