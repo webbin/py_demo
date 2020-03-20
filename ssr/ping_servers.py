@@ -36,23 +36,28 @@ class PingThread (threading.Thread):
         ping_ip(self.ip)
 
 
-json_file = open('./export-ssr-0319.json', 'r')
-text = json_file.read()
-conf = json.loads(text)
-server_list = conf['configs']
+def check_ssr_servers():
+    json_file = open('./export-ssr-0319.json', 'r')
+    text = json_file.read()
+    conf = json.loads(text)
+    server_list = conf['configs']
 
-thread_list = []
+    thread_list = []
 
-for server in server_list:
-    server_ip = server['server']
-    th = PingThread(server_ip)
-    thread_list.append(th)
+    for server in server_list:
+        server_ip = server['server']
+        th = PingThread(server_ip)
+        thread_list.append(th)
 
-for th in thread_list:
-    th.start()
+    for th in thread_list:
+        th.start()
 
-for th in thread_list:
-    th.join()
+    for th in thread_list:
+        th.join()
+    print('--- ping servers end ---')
+
+
 # print(len(server_list))
-# ping_ip(server_list[0]['server'])
-print('--- ping servers end ---')
+m_thread = PingThread('us2.dawangidc.top')
+m_thread.start()
+print('after thread ')

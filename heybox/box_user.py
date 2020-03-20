@@ -3,8 +3,8 @@ import request_base
 user_profile_path = '/bbs/web/profile/post/links'
 
 
-def get_user_profile(user_id):
-    param = request_base.generate_param(request_base.MY_ID, user_id)
+def get_user_profile(user_id, post_limit=10, post_offset=0):
+    param = request_base.generate_param(request_base.MY_ID, user_id, limit=post_limit, offset=post_offset)
     param_str = request_base.generate_param_string(param)
     fetch_url = request_base.generate_url(user_profile_path, param_str)
     return request_base.send_request(fetch_url)
@@ -55,17 +55,23 @@ def get_user_info_by_uid(uid):
             return None
 
 
-def get_post_id_list_by_uid(uid):
-    resp = get_user_profile(uid)
+def get_post_id_list_by_uid(uid, post_limit=10, post_offset=0):
+    resp = get_user_profile(uid, post_limit, post_offset)
     data = request_base.get_json_result_from_response(resp)
+
+    link_ids = []
+
     if data is None:
         print('get user profile failed ')
         return []
     else:
-        post_links = data['post_links']
-        link_ids = []
-        for link in post_links:
-            link_id = link['linkid']
-            link_ids.append(link_id)
-            # print('link id = ', link_id)
-        return link_ids
+        try:
+            post_links = data['post_links']
+            for link in post_links:
+                link_id = link['linkid']
+                link_ids.append(link_id)
+                # print('link id = ', link_id)
+            return link_ids
+        except Exception as e:
+            print('get user profile failed, uid = {1} , exception {0}'.format(str(e), uid))
+            return []

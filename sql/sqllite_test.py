@@ -1,6 +1,8 @@
 
 import sqlite3
 import sys
+import time
+import math
 
 
 class UserTableTool:
@@ -45,12 +47,35 @@ class UserTableTool:
         length = len(result)
         return length > 0
 
+    def check_uid_has_visit(self, uid):
+        result = self.select('visit_user_1', '*', 'user_id=' + uid)
+        # print('check uid, ', result)
+        length = len(result)
+        return length > 0
+
+    def insert_visit_user(self, uid):
+        sql_str = '''insert into visit_user_1
+                (user_id, visit_time)
+                values
+                (:st_id, :st_insert_time)
+                '''
+        ts = math.floor(time.time())
+        try:
+            self.cursor.execute(sql_str, {
+                'st_id': uid,
+                'st_insert_time': ts,
+            })
+            self.connection.commit()
+        except Exception as e:
+            print('insert visit failed, uid = {1} , exception {0}'.format(str(e), uid))
+
     def insert_user_info(self, name, user_id, img_url, fans_count, follow_count, like_count):
         sql_str = '''insert into user_test1
-        (name, id, img_url, fans_count, follow_count, like_count)
+        (name, id, img_url, fans_count, follow_count, like_count, insert_time)
         values
-        (:st_name, :st_id, :st_img_url, :st_fans_count, :st_follow_count, :st_like_count)
+        (:st_name, :st_id, :st_img_url, :st_fans_count, :st_follow_count, :st_like_count, :st_insert_time)
         '''
+        ts = math.floor(time.time())
         try:
             self.cursor.execute(sql_str, {
                 'st_name': name,
@@ -59,6 +84,7 @@ class UserTableTool:
                 'st_fans_count': fans_count,
                 'st_follow_count': follow_count,
                 'st_like_count': like_count,
+                'st_insert_time': ts,
             })
             self.connection.commit()
         except Exception as e:
