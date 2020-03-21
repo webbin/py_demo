@@ -54,7 +54,7 @@ def start_crawler(table_tool: UserTableTool):
 
 
 visit_user_set = set()
-MAX_VISIT_COUNT = 2000
+MAX_VISIT_COUNT = 20
 insert_count = 0
 time_data = {'count': 0}
 
@@ -100,13 +100,11 @@ def insert_user_list_by_user_post(uid, table_tool: UserTableTool):
                 is_in = table_tool.check_uid_in_user_base(user_id)
                 # 已在数据库中保存过，忽略
                 if is_in:
-                    insert_user_list_by_user_post(user_id, table_tool)
                     break
                 u_info = box_user.get_user_info_by_uid(user_id)
                 if u_info is not None:
                     insert_user_by_user_info(table_tool, u_info)
                     time_data['count'] += 1
-                insert_user_list_by_user_post(user_id, table_tool)
 
         if result_length == 0:
             list_to_end = True
