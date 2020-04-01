@@ -58,6 +58,7 @@ def check_ssr_servers():
 
 
 # print(len(server_list))
-m_thread = PingThread('us2.dawangidc.top')
-m_thread.start()
-print('after thread ')
+# m_thread = PingThread('us2.dawangidc.top')
+# m_thread.start()
+# print('after thread ')
+check_ssr_servers()
