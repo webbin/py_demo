@@ -3,12 +3,9 @@ from urllib import request as url_request
 import requests as request_lib
 from requests.exceptions import SSLError, HTTPError as ReqHttpError
 from urllib.error import HTTPError, URLError
-from bs4 import BeautifulSoup
 from io import open
 import os
-
-Html_Parser = 'html.parser'
-
+from base import base_bs
 
 User_Agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
              'Chrome/80.0.3987.132 Safari/537.36'
@@ -88,7 +85,7 @@ def get_img_url_from_page_detail(page_url):
     if res is None:
         print('None, response is None ')
         return None
-    bs = BeautifulSoup(res.text, Html_Parser)
+    bs = base_bs.get_bs_parse_result(res.text)
     img = bs.find('img', {'id': 'wallpaper'})
     if img is None:
         print('None, cannot find image ')
@@ -106,7 +103,7 @@ def fetch_wall_haven_anime():
         return
     # print(res.text)
     # write_result(res.text)
-    bs = BeautifulSoup(res.text, Html_Parser)
+    bs = base_bs.get_bs_parse_result(res.text)
     links = bs.findAll('a', {'class': 'preview'})
     for link in links:
         href = link.get('href')
