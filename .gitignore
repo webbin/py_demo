@@ -2,3 +2,9 @@
 
 response.txt
 venv
+
+__pycache__
+
+
+wallhaven_cc/src
+bing/src

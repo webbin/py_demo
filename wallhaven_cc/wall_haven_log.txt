@@ -1,0 +1,402 @@
+fetch and download, page = 3
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5jzzq.jpg
+file exist
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg117l.jpg
+file exist
+download completed https://w.wallhaven.cc/full/dg/wallhaven-dgzkgg.jpg
+file exist
+download completed https://w.wallhaven.cc/full/kw/wallhaven-kwgp6q.jpg
+file exist
+download completed https://w.wallhaven.cc/full/kw/wallhaven-kwggo1.png
+file exist
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg1ygm.jpg
+file exist
+download completed https://w.wallhaven.cc/full/q6/wallhaven-q6ep7l.jpg
+file exist
+download completed https://w.wallhaven.cc/full/96/wallhaven-96wjy1.jpg
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5jk5y.jpg
+fetch and download, page = 4
+file exist
+download completed https://w.wallhaven.cc/full/73/wallhaven-7372gv.png
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5j1vp.png
+file exist
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2ex6yg.png
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wqom7.png
+fetch and download, page = 5
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wqx37.jpg
+file exist
+download completed https://w.wallhaven.cc/full/lm/wallhaven-lmoxpr.jpg
+file exist
+download completed https://w.wallhaven.cc/full/zm/wallhaven-zmjoyw.jpg
+file exist
+download completed https://w.wallhaven.cc/full/q6/wallhaven-q6el15.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-ymlg6d.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmzq7.png
+file exist
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg18w5.jpg
+file exist
+download completed https://w.wallhaven.cc/full/lm/wallhaven-lmoo5l.jpg
+file exist
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg1dyp.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-ymo8kd.jpg
+file exist
+download completed https://w.wallhaven.cc/full/kw/wallhaven-kwg61q.jpg
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5jjoq.jpg
+file exist
+download completed https://w.wallhaven.cc/full/r2/wallhaven-r2x5j7.jpg
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j575pw.jpg
+file exist
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kllv.jpg
+file exist
+download completed https://w.wallhaven.cc/full/zm/wallhaven-zmj76g.jpg
+file exist
+download completed https://w.wallhaven.cc/full/lm/wallhaven-lmowyr.jpg
+file exist
+download completed https://w.wallhaven.cc/full/96/wallhaven-96wkm1.jpg
+file exist
+download completed https://w.wallhaven.cc/full/dg/wallhaven-dgzjel.jpg
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wq6v8.png
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5jd7m.png
+file exist
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8k6vd.png
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-yml1xd.jpg
+file exist
+download completed https://w.wallhaven.cc/full/dg/wallhaven-dgy8gg.jpg
+fetch and download, page = 6
+file exist
+download completed https://w.wallhaven.cc/full/q6/wallhaven-q6e75q.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmldl.jpg
+file exist
+download completed https://w.wallhaven.cc/full/r2/wallhaven-r2xwkw.jpg
+file exist
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg1k58.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-ymll3k.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmmk9.jpg
+file exist
+download completed https://w.wallhaven.cc/full/39/wallhaven-39jz3y.jpg
+file exist
+download completed https://w.wallhaven.cc/full/md/wallhaven-md66vk.png
+file exist
+download completed https://w.wallhaven.cc/full/zm/wallhaven-zmjd6o.png
+file exist
+download completed https://w.wallhaven.cc/full/kw/wallhaven-kwg27m.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ey/wallhaven-eylogr.jpg
+fetch and download, page = 7
+file exist
+download completed https://w.wallhaven.cc/full/xl/wallhaven-xlypvd.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-yml6wg.jpg
+file exist
+download completed https://w.wallhaven.cc/full/13/wallhaven-13emz1.jpg
+file exist
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8k2le.png
+file exist
+download completed https://w.wallhaven.cc/full/ey/wallhaven-eyqpow.png
+file exist
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2elejm.png
+file exist
+download completed https://w.wallhaven.cc/full/zm/wallhaven-zmjk1g.png
+file exist
+download completed https://w.wallhaven.cc/full/6k/wallhaven-6k6d8w.jpg
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wqpg7.jpg
+file exist
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2exdyy.png
+file exist
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2ex9gg.jpg
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wq898.jpg
+file exist
+download completed https://w.wallhaven.cc/full/lm/wallhaven-lmol5r.jpg
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wodl3.png
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5j2mq.png
+file exist
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kkqv.jpg
+file exist
+download completed https://w.wallhaven.cc/full/39/wallhaven-3982g6.png
+fetch and download, page = 8
+file exist
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8kx2d.jpg
+file exist
+download completed https://w.wallhaven.cc/full/13/wallhaven-13e9mv.jpg
+fetch and download, page = 9
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-ymlpv7.png
+file exist
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wqko9.png
+file exist
+download completed https://w.wallhaven.cc/full/wy/wallhaven-wyk32r.jpg
+file exist
+download completed https://w.wallhaven.cc/full/md/wallhaven-md6vmk.jpg
+file exist
+download completed https://w.wallhaven.cc/full/p8/wallhaven-p8pvxe.png
+file exist
+download completed https://w.wallhaven.cc/full/6k/wallhaven-6k18pw.jpg
+file exist
+download completed https://w.wallhaven.cc/full/md/wallhaven-mde9qk.png
+file exist
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8kkoe.png
+file exist
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5jd7p.jpg
+file exist
+download completed https://w.wallhaven.cc/full/ym/wallhaven-yml67d.jpg
+file exist
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8krol.jpg
+fetch and download, page = 3
+download img url = https://w.wallhaven.cc/full/ox/wallhaven-oxmwvm.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmwvm.jpg
+download img url = https://w.wallhaven.cc/full/j5/wallhaven-j5jzzq.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5jzzq.jpg
+fetch and download, page = 4
+download img url = https://w.wallhaven.cc/full/13/wallhaven-13ex39.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/13/wallhaven-13ex39.jpg
+download img url = https://w.wallhaven.cc/full/73/wallhaven-7372gv.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/73/wallhaven-7372gv.png
+download img url = https://w.wallhaven.cc/full/j5/wallhaven-j5j1vp.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/j5/wallhaven-j5j1vp.png
+download img url = https://w.wallhaven.cc/full/2e/wallhaven-2ex6yg.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2ex6yg.png
+download img url = https://w.wallhaven.cc/full/5w/wallhaven-5wqom7.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wqom7.png
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kvwe.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kvwe.jpg
+download img url = https://w.wallhaven.cc/full/zm/wallhaven-zmjqxw.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/zm/wallhaven-zmjqxw.jpg
+download img url = https://w.wallhaven.cc/full/xl/wallhaven-xlygj3.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/xl/wallhaven-xlygj3.jpg
+download img url = https://w.wallhaven.cc/full/ox/wallhaven-oxm73l.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxm73l.jpg
+download img url = https://w.wallhaven.cc/full/83/wallhaven-83wvw2.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/83/wallhaven-83wvw2.jpg
+download img url = https://w.wallhaven.cc/full/dg/wallhaven-dgzqkl.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/dg/wallhaven-dgzqkl.jpg
+download img url = https://w.wallhaven.cc/full/ey/wallhaven-eyqv1o.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ey/wallhaven-eyqv1o.jpg
+download img url = https://w.wallhaven.cc/full/2e/wallhaven-2ex7r9.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2ex7r9.jpg
+download img url = https://w.wallhaven.cc/full/13/wallhaven-13y3yv.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/13/wallhaven-13y3yv.png
+download img url = https://w.wallhaven.cc/full/ox/wallhaven-oxmmvm.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmmvm.jpg
+download img url = https://w.wallhaven.cc/full/vg/wallhaven-vg13j3.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg13j3.png
+download img url = https://w.wallhaven.cc/full/2e/wallhaven-2exvjy.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/2e/wallhaven-2exvjy.jpg
+download img url = https://w.wallhaven.cc/full/xl/wallhaven-xlg5kd.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/xl/wallhaven-xlg5kd.jpg
+download img url = https://w.wallhaven.cc/full/39/wallhaven-398gdv.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/39/wallhaven-398gdv.png
+download img url = https://w.wallhaven.cc/full/q6/wallhaven-q6emld.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/q6/wallhaven-q6emld.png
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kkov.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kkov.jpg
+download img url = https://w.wallhaven.cc/full/ym/wallhaven-yml1yk.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ym/wallhaven-yml1yk.png
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kdgy.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kdgy.png
+download img url = https://w.wallhaven.cc/full/5w/wallhaven-5wqvq5.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wqvq5.jpg
+fetch and download, page = 5
+fetch and download, page = 6
+download img url = https://w.wallhaven.cc/full/dg/wallhaven-dgy8gg.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/dg/wallhaven-dgy8gg.jpg
+download img url = https://w.wallhaven.cc/full/q6/wallhaven-q6e75q.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/q6/wallhaven-q6e75q.jpg
+download img url = https://w.wallhaven.cc/full/ox/wallhaven-oxmldl.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmldl.jpg
+download img url = https://w.wallhaven.cc/full/r2/wallhaven-r2xwkw.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/r2/wallhaven-r2xwkw.jpg
+download img url = https://w.wallhaven.cc/full/vg/wallhaven-vg1k58.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vg1k58.jpg
+download img url = https://w.wallhaven.cc/full/ym/wallhaven-ymll3k.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ym/wallhaven-ymll3k.jpg
+download img url = https://w.wallhaven.cc/full/ox/wallhaven-oxmmk9.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ox/wallhaven-oxmmk9.jpg
+download img url = https://w.wallhaven.cc/full/md/wallhaven-md66vk.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/md/wallhaven-md66vk.png
+download img url = https://w.wallhaven.cc/full/39/wallhaven-39jz3y.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/39/wallhaven-39jz3y.jpg
+download img url = https://w.wallhaven.cc/full/zm/wallhaven-zmjd6o.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/zm/wallhaven-zmjd6o.png
+fetch and download, page = 7
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kv63.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kv63.png
+download img url = https://w.wallhaven.cc/full/xl/wallhaven-xlypvd.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/xl/wallhaven-xlypvd.jpg
+download img url = https://w.wallhaven.cc/full/ym/wallhaven-yml6wg.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/ym/wallhaven-yml6wg.jpg
+download img url = https://w.wallhaven.cc/full/g8/wallhaven-g8k2le.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8k2le.png
+download img url = https://w.wallhaven.cc/full/13/wallhaven-13emz1.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/13/wallhaven-13emz1.jpg
+fetch and download, page = 8
+download img url = https://w.wallhaven.cc/full/wy/wallhaven-wykw7x.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/wy/wallhaven-wykw7x.png
+download img url = https://w.wallhaven.cc/full/g8/wallhaven-g8kx2d.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/g8/wallhaven-g8kx2d.jpg
+download img url = https://w.wallhaven.cc/full/13/wallhaven-13e9mv.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/13/wallhaven-13e9mv.jpg
+download img url = https://w.wallhaven.cc/full/5w/wallhaven-5wq3o8.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/5w/wallhaven-5wq3o8.jpg
+download img url = https://w.wallhaven.cc/full/vg/wallhaven-vglgwp.jpg
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/vg/wallhaven-vglgwp.jpg
+download img url = https://w.wallhaven.cc/full/xl/wallhaven-xlyy3v.png
+download image failed, exception = 'content-disposition'
+download completed https://w.wallhaven.cc/full/xl/wallhaven-xlyy3v.png
+fetch and download, page = 9
+download img url = https://w.wallhaven.cc/full/vg/wallhaven-vglgwp.jpg
+headers
+download image failed, exception = 'content-disposition'
+download img url = https://w.wallhaven.cc/full/vg/wallhaven-vglgwp.jpg
+headers
+url https://w.wallhaven.cc/full/vg/wallhaven-vglgwp.jpg download complete 
+fetch and download, page = 1
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg
+headers
+url https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg download complete 
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kq69.jpg
+headers
+url https://w.wallhaven.cc/full/73/wallhaven-73kq69.jpg download complete 
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kq69.jpg
+download img url = https://w.wallhaven.cc/full/r2/wallhaven-r2x6rm.jpg
+headers
+url https://w.wallhaven.cc/full/r2/wallhaven-r2x6rm.jpg download complete 
+download completed https://w.wallhaven.cc/full/r2/wallhaven-r2x6rm.jpg
+download img url = https://w.wallhaven.cc/full/96/wallhaven-96wqpx.jpg
+headers
+url https://w.wallhaven.cc/full/96/wallhaven-96wqpx.jpg download complete 
+download completed https://w.wallhaven.cc/full/96/wallhaven-96wqpx.jpg
+fetch and download, page = 2
+fetch and download, page = 3
+fetch and download, page = 4
+fetch and download, page = 5
+fetch and download, page = 6
+fetch and download, page = 7
+fetch and download, page = 8
+fetch and download, page = 9
+fetch and download, page = 1
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=1&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 2
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=2&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 3
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=3&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 4
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=4&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 5
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=5&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 6
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=6&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 7
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=7&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 8
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=8&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 9
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=9&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 1
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=1&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 2
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=2&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 3
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=3&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 4
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=4&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 5
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=5&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 6
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=6&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 7
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=7&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 8
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=8&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 9
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=9&sorting=toplist&order=desc (Caused by SSLError(SSLError("bad handshake: SysCallError(-1, 'Unexpected EOF')")))
+fetch and download, page = 1
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 2
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 3
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 4
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 5
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 6
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 7
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 8
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 9
+error __init__() got an unexpected keyword argument 'ssl_context'
+fetch and download, page = 1
+fetch and download, page = 2
+fetch and download, page = 3
+fetch and download, page = 4
+fetch and download, page = 5
+fetch and download, page = 6

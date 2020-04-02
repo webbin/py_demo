@@ -66,7 +66,6 @@ def generate_param_string(obj: dict):
 def send_request(fetch_url: str):
     session = requests.Session()
     session.headers = header
-
     # print('fetch url = ', fetch_url)
     try:
         res = session.get(fetch_url)
