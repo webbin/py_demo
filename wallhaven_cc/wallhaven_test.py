@@ -1,16 +1,49 @@
-
 from urllib import request as url_request
 import requests as request_lib
 from requests.exceptions import SSLError, HTTPError as ReqHttpError
-from urllib.error import HTTPError, URLError
+
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.ssl_ import create_urllib3_context
+
 from io import open
 import os
-from base import base_bs
+import sys
+
+cwd = os.getcwd()
+splits = cwd.split(os.sep)
+splits.pop()
+parent_path = '/'.join(splits)
+sys.path.append(parent_path)
+
+from base import base_bs, base_requests, base_log, base_selenium
 
 User_Agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) ' \
              'Chrome/80.0.3987.132 Safari/537.36'
 
 HEADER = {'User-Agent': User_Agent}
+img_dir = cwd + '/src'
+
+log_tool = base_log.LogTool('wall_haven_log.txt', need_print=True)
+
+
+class DESAdapter(HTTPAdapter):
+    """
+    A TransportAdapter that re-enables 3DES support in Requests.
+    """
+    def init_poolmanager(self, *args, **kwargs):
+        self.CIPHERS = (
+            'ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+HIGH:'
+            'DH+HIGH:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+HIGH:RSA+3DES:!aNULL:'
+            '!eNULL:!MD5'
+        )
+        context = create_urllib3_context(ciphers=self.CIPHERS)
+        kwargs['ssl_context'] = context
+        return super(DESAdapter, self).init_poolmanager(*args, **kwargs)
+
+    def proxy_manager_for(self, *args, **kwargs):
+        context = create_urllib3_context(ciphers=self.CIPHERS)
+        kwargs['ssl_context'] = context
+        return super(DESAdapter, self).proxy_manager_for(*args, **kwargs)
 
 
 def custom_proxy_open_url(url: str):
@@ -24,7 +57,7 @@ def custom_proxy_open_url(url: str):
 
 
 def get_img_file_path(file_name):
-    return 'src/'+file_name
+    return 'src/' + file_name
 
 
 def download_img(img_url):
@@ -41,7 +74,7 @@ def download_img_by_requests(img_url):
     file_name = get_file_name_from_url(img_url)
     file_path = get_img_file_path(file_name)
     if os.path.exists(file_path):
-        print('url %s file exists ' % img_url)
+        log_tool.log('url %s file exists ' % img_url)
     else:
         try:
             res = request_lib.get(img_url)
@@ -70,10 +103,11 @@ def send_request_by_aqara_proxy(input_url):
     session = request_lib.Session()
     session.proxies = proxies
     session.headers = HEADER
+    session.mount(input_url, DESAdapter())
     try:
         res = session.get(input_url)
-    except (ReqHttpError, SSLError) as e:
-        print('error', str(e))
+    except Exception as e:
+        log_tool.log('error {}'.format(e))
         return None
     else:
         return res
@@ -96,9 +130,12 @@ def get_img_url_from_page_detail(page_url):
         return src
 
 
-def fetch_wall_haven_anime():
-    url_wallhaven = 'https://wallhaven.cc/search?q=id:1&ref=fp'
-    res = send_request_by_aqara_proxy(url_wallhaven)
+def get_wall_haven_url(query, page):
+    return 'https://wallhaven.cc/search?q={0}&page={1}&sorting=toplist&order=desc'.format(query, page)
+
+
+def fetch_and_download_wall_haven_anime(fetch_url):
+    res = send_request_by_aqara_proxy(fetch_url)
     if res is None:
         return
     # print(res.text)
@@ -107,12 +144,47 @@ def fetch_wall_haven_anime():
     links = bs.findAll('a', {'class': 'preview'})
     for link in links:
         href = link.get('href')
-        # print(href)
         img_url = get_img_url_from_page_detail(href)
-        download_img_by_requests(img_url)
+        if img_url is None:
+            return
+        file_name = get_file_name_from_url(img_url)
+        file_path = cwd + '/src/' + file_name
+        requests_tool.download_img_by_requests(img_url, download_file_path=file_path, overwrite=False)
+        log_tool.log('download completed ' + img_url)
+        # download_img_by_requests(img_url)
+
+
+def start_download_anime_wallpaper():
+    index = 1
+    browser = base_selenium.BaseBrowser()
+    while index < 10:
+        log_tool.log('fetch and download, page = {}'.format(index))
+        fetch_url = get_wall_haven_url('anime', index)
+        # fetch_and_download_wall_haven_anime(fetch_url)
+        html = browser.get_html_by_url(fetch_url)
+        print(html)
+        index += 1
+    browser.close_browser()
+
+
+def get_html_by_browser(fetch_url):
+    browser = base_selenium.BaseBrowser()
+    html = browser.get_html_by_url(fetch_url)
+    print(html)
 
 
 # fetch_wall_haven_anime()
+requests_tool = base_requests.BaseRequests(log_tool)
+requests_tool.set_proxy({
+    'http': 'socks5://proxy.aqara.com:1080',
+    'https': 'socks5://proxy.aqara.com:1080',
+})
 # down_file_url = 'https://w.wallhaven.cc/full/8x/wallhaven-8xxjjj.jpg'
 # download_img_by_requests(down_file_url)
-fetch_wall_haven_anime()
+start_download_anime_wallpaper()
+# img_u = 'https://w.wallhaven.cc/full/vg/wallhaven-vglgwp.jpg'
+# requests_tool.download_img_by_requests(
+#     img_u,
+#     download_file_path=cwd+'/src/'+get_file_name_from_url(img_u),
+#     overwrite=False
+# )
