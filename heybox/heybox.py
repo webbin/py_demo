@@ -54,7 +54,7 @@ def start_crawler(table_tool: UserTableTool):
 
 
 visit_user_set = set()
-MAX_VISIT_COUNT = 200
+MAX_VISIT_COUNT = 2000
 insert_count = 0
 time_data = {'count': 0}
 
@@ -118,7 +118,7 @@ user_table_tool.start_connect()
 
 start_time = time.time()
 
-insert_user_list_by_user_post(table_tool=user_table_tool, uid='12920289')
+insert_user_list_by_user_post(table_tool=user_table_tool, uid='11741156')
 # user_table_tool.insert_user_info('abd===aaa', '1001100290202', 'http', 19, 11, 222)
 # user_table_tool.insert_visit_user('15491083')
 
