@@ -41,6 +41,18 @@ class UserTableTool:
             print('select failed, where = {1} , exception {0}'.format(str(e), where))
             return []
 
+    def select_user_by_offset(self, limit, offset):
+        sql_str = '''
+            select * from user_test1 order by id limit {0} offset {1}
+        '''.format(limit, offset)
+        try:
+            self.cursor.execute(sql_str)
+            values = self.cursor.fetchall()
+            return values
+        except Exception as e:
+            print('select failed, limit = {1} , offset = {2}, exception {0}'.format(str(e), limit, offset))
+            return []
+
     def check_uid_in_user_base(self, uid):
         result = self.select('user_test1', '*', 'id=' + uid)
         # print('check uid, ', result)
