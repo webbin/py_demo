@@ -65,6 +65,19 @@ class UserTableTool:
         length = len(result)
         return length > 0
 
+    def get_user_list_by_offset(self, limit=10, offset=0):
+        # offset代表从第几条记录“之后“开始查询，limit表明查询多少条结果
+        sql_str = '''
+            select * from user_test1 order by id limit {0} offset {1}
+        '''.format(limit, offset)
+        try:
+            self.cursor.execute(sql_str)
+            values = self.cursor.fetchall()
+            return values
+        except Exception as e:
+            print('get user list offset , exception {0}'.format(str(e)))
+            return []
+
     def insert_visit_user(self, uid):
         sql_str = '''insert into visit_user_1
                 (user_id, visit_time)
@@ -105,19 +118,8 @@ class UserTableTool:
 
 # table_tool = UserTableTool('./testDB.db')
 # table_tool.start_connect()
-# cur = conn.cursor()
-# c.execute('''CREATE TABLE COMPANY
-#        (ID INT PRIMARY KEY     NOT NULL,
-#        NAME           TEXT    NOT NULL,
-#        AGE            INT     NOT NULL,
-#        ADDRESS        CHAR(50),
-#        SALARY         REAL);''')
-# print('table create')
-# conn.commit()
-# conn.close()
-
-# print('insert ')
-# print(sys.path)
 # table_tool.insert_user_info('abd', '1001100290202', 'http', 19, 11, 222)
+# user_list = table_tool.get_user_list_by_offset(20, 0)
+# print(user_list)
 # table_tool.close_connection()
-# select_user_by_id('100202')
+
