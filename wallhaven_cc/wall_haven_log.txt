@@ -400,3 +400,20 @@ fetch and download, page = 3
 fetch and download, page = 4
 fetch and download, page = 5
 fetch and download, page = 6
+fetch and download, page = 1
+error SOCKSHTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /search?q=anime&page=1&sorting=toplist&order=desc (Caused by NewConnectionError('<urllib3.contrib.socks.SOCKSHTTPSConnection object at 0x10a42a850>: Failed to establish a new connection: [Errno 60] Operation timed out'))
+fetch and download, page = 1
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg
+headers
+download image failed, exception = [Errno 2] No such file or directory: '/Users/webbin/py_project/py_test/wallhaven_cc/src/wallhaven-73kx9o.jpg'
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg
+download img url = https://w.wallhaven.cc/full/r2/wallhaven-r2x6rm.jpg
+headers
+download image failed, exception = [Errno 2] No such file or directory: '/Users/webbin/py_project/py_test/wallhaven_cc/src/wallhaven-r2x6rm.jpg'
+download completed https://w.wallhaven.cc/full/r2/wallhaven-r2x6rm.jpg
+fetch and download, page = 1
+download img url = https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg
+headers
+url https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg download complete 
+download completed https://w.wallhaven.cc/full/73/wallhaven-73kx9o.jpg
+error HTTPSConnectionPool(host='wallhaven.cc', port=443): Max retries exceeded with url: /w/r2x6rm (Caused by ProxyError('Cannot connect to proxy.', NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x10a09f450>: Failed to establish a new connection: [Errno 61] Connection refused')))
