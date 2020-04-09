@@ -105,17 +105,18 @@ class BaseRequests():
             download_result = False
         else:
             self.write_log('url %s download complete ' % img_url)
-            download_result = True
+        # self.write_log('url %s download complete ' % img_url)
         return download_result
-            # self.write_log('url %s download complete ' % img_url)
 
     def send_request(self, fetch_url):
         session = requests.session()
+        download_result = True
         session.headers = header
 
         if self.proxy is not None:
-            session.proxies = self.proxy
+            pass
 
+        session.proxies = self.proxy
         try:
             response = session.get(fetch_url)
             return response.text
