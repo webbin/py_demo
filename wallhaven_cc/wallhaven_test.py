@@ -24,6 +24,8 @@ HEADER = {'User-Agent': User_Agent}
 img_dir = cwd + '/src'
 
 log_tool = base_log.LogTool('wall_haven_log.txt', need_print=True)
+requests_tool = base_requests.BaseRequests(log_tool)
+requests_tool.use_proxy(1)
 
 
 class DESAdapter(HTTPAdapter):
@@ -174,11 +176,6 @@ def get_html_by_browser(fetch_url):
 
 
 # fetch_wall_haven_anime()
-requests_tool = base_requests.BaseRequests(log_tool)
-requests_tool.set_proxy({
-    'http': 'socks5://proxy.aqara.com:1080',
-    'https': 'socks5://proxy.aqara.com:1080',
-})
 # down_file_url = 'https://w.wallhaven.cc/full/8x/wallhaven-8xxjjj.jpg'
 # download_img_by_requests(down_file_url)
 start_download_anime_wallpaper()
