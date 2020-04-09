@@ -29,6 +29,12 @@ class BaseRequests():
         self.log_tool = log_tool
         self.proxy = None
 
+    def write_log(self, text):
+        if self.log_tool is not None:
+            self.log_tool.log(text)
+        else:
+            print(text)
+
     def get_file_name_by_time(self, prefix='', suffix=''):
         name = str(math.floor(time.time() * 1000))
         return prefix + name + suffix
@@ -36,8 +42,6 @@ class BaseRequests():
     def write_log(self, text):
         if self.log_tool:
             self.log_tool.log(text)
-        else:
-            print(text)
 
     def get_file_name_from_header(self, headers):
         disposition = headers['Content-Disposition']
@@ -103,6 +107,25 @@ class BaseRequests():
             self.write_log('url %s download complete ' % img_url)
             download_result = True
         return download_result
+            # self.write_log('url %s download complete ' % img_url)
+
+    def send_request(self, fetch_url):
+        session = requests.session()
+        session.headers = header
+
+        if self.proxy is not None:
+            session.proxies = self.proxy
+
+        try:
+            response = session.get(fetch_url)
+            return response.text
+        except Exception as e:
+            self.write_log('send request error {}'.format(e))
+            return None
+
+    def get(self, url):
+        session = requests.session()
+        session.headers = header
 
 
 def base_request(fetch_url):
