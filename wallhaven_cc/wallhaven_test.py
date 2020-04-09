@@ -2,8 +2,8 @@ from urllib import request as url_request
 import requests as request_lib
 from requests.exceptions import SSLError, HTTPError as ReqHttpError
 
-from requests.adapters import HTTPAdapter
-from requests.packages.urllib3.util.ssl_ import create_urllib3_context
+# from requests.adapters import HTTPAdapter
+# from requests.packages.urllib3.util.ssl_ import create_urllib3_context
 
 from io import open
 import os
@@ -24,38 +24,38 @@ HEADER = {'User-Agent': User_Agent}
 img_dir = cwd + '/src'
 
 log_tool = base_log.LogTool('wall_haven_log.txt', need_print=True)
+is_use_aqara = False
+SSR_Proxy = {
+    'http': 'http://127.0.0.1:1087',
+    'https': 'http://127.0.0.1:1087',
+}
+AQARA_PROXY = {
+    'http': 'socks5://proxy.aqara.com:1080',
+    'https': 'socks5://proxy.aqara.com:1080',
+}
 requests_tool = base_requests.BaseRequests(log_tool)
 requests_tool.use_proxy(1)
 
 
-class DESAdapter(HTTPAdapter):
-    """
-    A TransportAdapter that re-enables 3DES support in Requests.
-    """
-    def init_poolmanager(self, *args, **kwargs):
-        self.CIPHERS = (
-            'ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+HIGH:'
-            'DH+HIGH:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+HIGH:RSA+3DES:!aNULL:'
-            '!eNULL:!MD5'
-        )
-        context = create_urllib3_context(ciphers=self.CIPHERS)
-        kwargs['ssl_context'] = context
-        return super(DESAdapter, self).init_poolmanager(*args, **kwargs)
 
-    def proxy_manager_for(self, *args, **kwargs):
-        context = create_urllib3_context(ciphers=self.CIPHERS)
-        kwargs['ssl_context'] = context
-        return super(DESAdapter, self).proxy_manager_for(*args, **kwargs)
-
-
-def custom_proxy_open_url(url: str):
-    proxy_host = '127.0.0.1:1087'  # host and port of your proxy
-
-    req = url_request.Request('url')
-    req.set_proxy(proxy_host, 'http')
-
-    response = url_request.urlopen(req)
-    print(response.read().decode('utf8'))
+# class DESAdapter(HTTPAdapter):
+#     """
+#     A TransportAdapter that re-enables 3DES support in Requests.
+#     """
+#     def init_poolmanager(self, *args, **kwargs):
+#         self.CIPHERS = (
+#             'ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+HIGH:'
+#             'DH+HIGH:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+HIGH:RSA+3DES:!aNULL:'
+#             '!eNULL:!MD5'
+#         )
+#         context = create_urllib3_context(ciphers=self.CIPHERS)
+#         kwargs['ssl_context'] = context
+#         return super(DESAdapter, self).init_poolmanager(*args, **kwargs)
+#
+#     def proxy_manager_for(self, *args, **kwargs):
+#         context = create_urllib3_context(ciphers=self.CIPHERS)
+#         kwargs['ssl_context'] = context
+#         return super(DESAdapter, self).proxy_manager_for(*args, **kwargs)
 
 
 def get_img_file_path(file_name):
@@ -97,15 +97,14 @@ def get_file_name_from_url(file_url: str):
     return splits.pop()
 
 
-def send_request_by_aqara_proxy(input_url):
-    proxies = {
-        'http': 'socks5://proxy.aqara.com:1080',
-        'https': 'socks5://proxy.aqara.com:1080',
-    }
+def send_request_by_proxy(input_url):
     session = request_lib.Session()
-    session.proxies = proxies
+    if is_use_aqara:
+        session.proxies = AQARA_PROXY
+    else:
+        session.proxies = SSR_Proxy
     session.headers = HEADER
-    session.mount(input_url, DESAdapter())
+    # session.mount(input_url, DESAdapter())
     try:
         res = session.get(input_url)
     except Exception as e:
@@ -116,7 +115,7 @@ def send_request_by_aqara_proxy(input_url):
 
 
 def get_img_url_from_page_detail(page_url):
-    res = send_request_by_aqara_proxy(page_url)
+    res = send_request_by_proxy(page_url)
     # write_result(res.text)
     if res is None:
         print('None, response is None ')
@@ -137,7 +136,7 @@ def get_wall_haven_url(query, page):
 
 
 def fetch_and_download_wall_haven_anime(fetch_url):
-    res = send_request_by_aqara_proxy(fetch_url)
+    res = send_request_by_proxy(fetch_url)
     if res is None:
         return
     # print(res.text)
@@ -158,15 +157,15 @@ def fetch_and_download_wall_haven_anime(fetch_url):
 
 def start_download_anime_wallpaper():
     index = 1
-    browser = base_selenium.BaseBrowser()
-    while index < 10:
+    # browser = base_selenium.BaseBrowser()
+    while index < 2:
         log_tool.log('fetch and download, page = {}'.format(index))
         fetch_url = get_wall_haven_url('anime', index)
-        # fetch_and_download_wall_haven_anime(fetch_url)
-        html = browser.get_html_by_url(fetch_url)
-        print(html)
+        fetch_and_download_wall_haven_anime(fetch_url)
+        # html = browser.get_html_by_url(fetch_url)
+        # print(html)
         index += 1
-    browser.close_browser()
+    # browser.close_browser()
 
 
 def get_html_by_browser(fetch_url):
@@ -176,6 +175,11 @@ def get_html_by_browser(fetch_url):
 
 
 # fetch_wall_haven_anime()
+requests_tool = base_requests.BaseRequests(log_tool)
+if is_use_aqara:
+    requests_tool.set_proxy(AQARA_PROXY)
+else:
+    requests_tool.set_proxy(SSR_Proxy)
 # down_file_url = 'https://w.wallhaven.cc/full/8x/wallhaven-8xxjjj.jpg'
 # download_img_by_requests(down_file_url)
 start_download_anime_wallpaper()
