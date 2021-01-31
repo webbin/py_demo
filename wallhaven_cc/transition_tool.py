@@ -30,7 +30,7 @@ class TransitionThreadPool:
         self.handler_count = 10
         self.handler_list = []
 
-    def handle_task(self, task):
+    def handle_task(self, task: Task):
         if len(self.handler_list) > self.handler_count:
             return False
         print('start handle task')
@@ -41,7 +41,7 @@ class TransitionManager:
     def __init__(self):
         self.task_list = []
 
-    def add_task(self, task):
+    def add_task(self, task: Task):
         self.task_list.append(task)
 
     def get_task(self):

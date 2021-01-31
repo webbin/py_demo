@@ -12,6 +12,7 @@ parent_path = '/'.join(splits)
 sys.path.append(parent_path)
 from base import base_requests
 
+request_tool = base_requests.BaseRequests()
 
 bundle_url = 'http://localhost:8081/index.js.bundle?platform=ios&dev=true&minify=false'
 img_url = 'http://h1.ioliu.cn/bing/PascuaFlorida_ZH-CN7720904158_800x480.jpg?imageslim'
@@ -29,7 +30,7 @@ def download_bundle():
 
 
 def download_img():
-    base_requests.download_img_by_requests(img_url, download_dir=cwd)
+    request_tool.download_img_by_requests(img_url, download_dir=cwd)
 
 
-download_img()
+# download_img()

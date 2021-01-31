@@ -33,6 +33,9 @@ AQARA_PROXY = {
     'http': 'socks5://proxy.aqara.com:1080',
     'https': 'socks5://proxy.aqara.com:1080',
 }
+requests_tool = base_requests.BaseRequests(log_tool)
+requests_tool.use_proxy(1)
+
 
 
 # class DESAdapter(HTTPAdapter):
