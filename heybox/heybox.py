@@ -13,7 +13,7 @@ splits.pop()
 parent_path = '/'.join(splits)
 sys.path.append(parent_path)
 
-from sql.sqllite_test import UserTableTool
+from sql.UserTableTool import UserTableTool
 import sys
 
 
