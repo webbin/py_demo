@@ -1,10 +1,8 @@
-
 from urllib.request import urlopen, ProxyHandler, build_opener, Request, urlretrieve
 import requests as request_lib
 from requests.exceptions import SSLError, HTTPError as ReqHttpError
 from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
-
 
 header = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36"
@@ -39,7 +37,7 @@ def download_file(download_url):
         print(res.headers)
 
 
-def get_proxy_response(input_url):
+def get_proxy_response(input_url: str):
     proxies = {
         'http': 'socks5://127.0.0.1:1086',
         'https': 'socks5://127.0.0.1:1086',
@@ -74,7 +72,7 @@ def write_result(result):
     print('write result done')
 
 
-def handle_page_detail(page_url):
+def handle_page_detail(page_url: str):
     res = get_proxy_response(page_url)
     # write_result(res.text)
     if res is None:

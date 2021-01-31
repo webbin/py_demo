@@ -1,6 +1,4 @@
-
 import sqlite3
-import sys
 import time
 import math
 
@@ -102,12 +100,3 @@ class UserTableTool:
             self.connection.commit()
         except Exception as e:
             print('insert user failed, id = {1} , exception {0}'.format(str(e), user_id))
-
-
-# table_tool = UserTableTool('./testDB.db')
-# table_tool.start_connect()
-# table_tool.insert_user_info('abd', '1001100290202', 'http', 19, 11, 222)
-# user_list = table_tool.get_user_list_by_offset(20, 0)
-# print(user_list)
-# table_tool.close_connection()
-
