@@ -11,7 +11,7 @@ from selenium.webdriver.common.keys import Keys
 # gecko_options = webdriver.FirefoxOptions()
 # browser = webdriver.Firefox(options=gecko_options)
 
-class BaseBrowser():
+class BaseBrowser:
     def __init__(self):
         chrome_options = webdriver.ChromeOptions()
         # 使用headless无界面浏览器模式

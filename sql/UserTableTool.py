@@ -3,11 +3,9 @@ import time
 import math
 import os
 import sys
-import BaseTableTool
-
+from sql.BaseTableTool import BaseTableTool
 
 # cwd = os.getcwd()
-#
 # splits = cwd.split(os.sep)
 # splits.pop()
 # parent_path = '/'.join(splits)

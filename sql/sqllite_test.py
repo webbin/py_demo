@@ -11,14 +11,22 @@ from sql.BaseTableTool import BaseTableTool
 
 
 def manual_table():
+    database_path = input('请输入db文件路径: ')
+    table_tool = BaseTableTool(database_path)
+
+    print('[0] 退出')
     print('[1] 创建表')
     print('[2] 删除表')
     table_operate = input('请输入要执行的操作: ')
     # print('您选择了 {0}'.format(table_operate))
+    if table_operate == '0':
+        table_tool.start_connect()
+        table_tool.close_connection()
+        exit(0)
 
     table_name = input('请输入table_name: ')
-    table_tool = BaseTableTool('./testDB.db')
     table_tool.start_connect()
+
     if table_operate == '1':
         result = table_tool.create_table(table_name, '''
             timestamp int,
