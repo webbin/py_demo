@@ -131,7 +131,8 @@ class BaseRequests:
 
 def base_request(fetch_url, custom_header=None):
     session = requests.Session()
-    merged_header = {}.update(header)
+    merged_header = {}
+    merged_header.update(header)
     if custom_header is not None:
         merged_header.update(custom_header)
     session.headers = merged_header

@@ -76,9 +76,11 @@ def get_user_id_from_url(user_url):
 
 
 def parse_comments_of_page_url(movie_id, url):
-    result = base_requests.base_request(url)
+    cookie = '__utmv=30149280.9430; gr_user_id=5c21482c-80a0-4b49-9282-15ead6410b42; _vwo_uuid_v2=D9A27CFD7695F5B756A774684F344A8E7|b6db148c463da0a1a9c9eba1c1379670; ll="118282"; bid=qRpP_orYXPA; __utmc=30149280; __utmz=30149280.1613705430.14.3.utmcsr=baidu|utmccn=(organic)|utmcmd=organic; __utmc=223695111; ap_v=0,6.0; _pk_ref.100001.4cf6=["","",1613731017,"https://www.douban.com/"]; _pk_ses.100001.4cf6=*; __utma=30149280.1878159750.1575353804.1613729127.1613731018.17; __utmt=1; __utmb=30149280.1.10.1613731018; dbcl2="94304536:kKumSIYYR4A"; ck=gdyb; _pk_id.100001.4cf6=caa8e6c212507330.1583305918.4.1613731043.1613729166.; __utma=223695111.2020287006.1583305918.1613729127.1613731043.5; __utmb=223695111.0.10.1613731043; __utmz=223695111.1613731043.5.2.utmcsr=accounts.douban.com|utmccn=(referral)|utmcmd=referral|utmcct=/; push_noty_num=0; push_doumail_num=0'
+    result = base_requests.base_request(url, {'Cookie': cookie})
     comment_list = []
     max_count = 0
+    error = False
 
     if result is not None:
         # print(len(result))
@@ -95,44 +97,46 @@ def parse_comments_of_page_url(movie_id, url):
             print('count exception ', result)
             max_count = -1
 
-        for commentItem in comments:
-            comment_span = commentItem.find('span', {'class': 'short'})
-            if comment_span is None:
-                print('comment error: ', commentItem)
-                print('comment error: ', comments)
-                continue
-            comment = comment_span.getText()
-            rate_span = commentItem.find('span', {'class': 'rating'})
+        try:
+            for commentItem in comments:
+                comment_span = commentItem.find('span', {'class': 'short'})
+                comment = comment_span.getText()
+                rate_span = commentItem.find('span', {'class': 'rating'})
 
-            rating = None
-            if rate_span is not None:
-                rat_str = rate_span['class']
-                rating = get_comment_rating(rat_str[0])
+                rating = None
+                if rate_span is not None:
+                    rat_str = rate_span['class']
+                    rating = get_comment_rating(rat_str[0])
 
-            cid = commentItem['data-cid']
-            user_tag = commentItem.find('div', {'class': 'avatar'})
+                cid = commentItem['data-cid']
+                user_tag = commentItem.find('div', {'class': 'avatar'})
 
-            uid = ''
-            user_name = ''
+                uid = ''
+                user_name = ''
 
-            if user_tag is not None:
-                user_url = user_tag.a['href']
-                uid = get_user_id_from_url(user_url)
-                user_name = user_tag.a['title']
-            # print(cid)
-            # print('user url = {}'.format(user_url))
+                if user_tag is not None:
+                    user_url = user_tag.a['href']
+                    uid = get_user_id_from_url(user_url)
+                    user_name = user_tag.a['title']
+                # print(cid)
+                # print('user url = {}'.format(user_url))
 
-            obj = {
-                'cid': cid,
-                'content': comment,
-                'rating': rating,
-                'user_name': user_name,
-                'product_id': movie_id,
-                'uid': uid,
-            }
-            comment_list.append(obj)
-            # print(obj)
-    return {'comment_list': comment_list, 'max_count': max_count}
+                obj = {
+                    'cid': cid,
+                    'content': comment,
+                    'rating': rating,
+                    'user_name': user_name,
+                    'product_id': movie_id,
+                    'uid': uid,
+                }
+                comment_list.append(obj)
+                # print(obj)
+        except Exception as e:
+            error = True
+            print('comment item exception ', e)
+            print('comment item exception ', result)
+
+    return {'comment_list': comment_list, 'max_count': max_count, 'error': error}
 
 
 def insert_comment_list_to_database(db_tool: DouBanDatabaseTool, comment_list):
@@ -150,12 +154,12 @@ def fetch_movie_comments():
     limit = 20
     db_tool = DouBanDatabaseTool(db_path)
     db_tool.start_connect()
-    comment_count = 0
 
     url = get_page_url(movie_id, start, limit)
     data = parse_comments_of_page_url(movie_id, url)
     comment_list = data['comment_list']
     count = data['max_count']
+    # print(len(comment_list))
 
     while start < count or count < 0:
         insert_comment_list_to_database(db_tool, comment_list)
@@ -165,7 +169,10 @@ def fetch_movie_comments():
         print('fetch start = ', start)
         url = get_page_url(movie_id, start, limit)
         data = parse_comments_of_page_url(movie_id, url)
-        comment_list = data['comment_list']
+        if data['error'] is True:
+            break
+        else:
+            comment_list = data['comment_list']
 
     db_tool.close_connection()
 
