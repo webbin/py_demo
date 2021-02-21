@@ -29,7 +29,7 @@ def record_temperature_task(util: TemperatureDBUtil, schedule: sched.scheduler, 
 def main():
     temp_database_util = TemperatureDBUtil('./temperature.db')
     temp_database_util.start_connect()
-    duration = 60
+    duration = 60 * 10
     schedule = sched.scheduler(time.time, time.sleep)
     schedule.enter(0, 0, record_temperature_task, (temp_database_util, schedule, duration))
     schedule.run()
