@@ -49,3 +49,41 @@ class BaseTableTool:
         except Exception as e:
             print('drop table {0} failed, exception {0}'.format(table_name, str(e)))
         return result
+
+    def select(self, table: str, cols='*', where=''):
+        """
+            查询
+            :param table: 表名
+            :param cols: 查询列
+            :param where: 查询条件
+            :return: 查询结果
+        """
+        if self.cursor is None:
+            return []
+        cursor = self.cursor
+        try:
+            where = 'WHERE ' + where if where else ''
+            sql_select = '''SELECT {1} FROM {0} {2}'''.format(table, cols, where)
+            # print(sql_select)
+            cursor.execute(sql_select)
+            values = cursor.fetchall()
+            return values
+        except Exception as e:
+            print('select failed, where = {1} , exception {0}'.format(str(e), where))
+            return []
+
+    def get_record_size(self, table):
+        size = 0
+        cursor = self.cursor
+        if cursor is None:
+            size = 0
+        try:
+            sql_select = '''SELECT * FROM {0}'''.format(table)
+            # print(sql_select)
+            cursor.execute(sql_select)
+            values = cursor.fetchall()
+            size = len(values)
+        except Exception as e:
+            print('select failed, exception {0}'.format(str(e)))
+
+        return size

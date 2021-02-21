@@ -13,30 +13,6 @@ from sql.BaseTableTool import BaseTableTool
 
 
 class TemperatureDBUtil(BaseTableTool):
-    # def __init__(self, file_path):
-    #     super().__init__(file_path)
-
-    def select(self, cols='*', where=''):
-        """
-            查询
-            :param cols: 查询列
-            :param where: 查询条件
-            :return: 查询结果
-        """
-        if self.cursor is None:
-            return
-        cursor = self.cursor
-        try:
-            where = 'WHERE ' + where if where else ''
-            sql_select = '''SELECT {0} FROM temperature {1}'''.format(cols, where)
-            # print(sql_select)
-            cursor.execute(sql_select)
-            values = cursor.fetchall()
-            return values
-        except Exception as e:
-            print('select failed, where = {1} , exception {0}'.format(str(e), where))
-            return []
-
     def insert_temperature(self, timestamp, temperature, humidity):
         result = False
         sql_str = '''insert into temperature

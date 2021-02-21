@@ -22,4 +22,4 @@ def fetch_file_url(url):
 
 
 img_url = 'https://wallpapersite.com/images/wallpapers/anime-girl-3840x2160-night-lonely-4k-19530.jpg'
-fetch_file_url(img_url)
+# fetch_file_url(img_url)

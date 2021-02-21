@@ -24,7 +24,7 @@ ELECTRON_SSR_PROXY = {
 }
 
 
-class BaseRequests():
+class BaseRequests:
     def __init__(self, log_tool: base_log.LogTool = None):
         self.log_tool = log_tool
         self.proxy = None
@@ -129,12 +129,19 @@ class BaseRequests():
         session.headers = header
 
 
-def base_request(fetch_url):
+def base_request(fetch_url, custom_header=None):
     session = requests.Session()
-    session.headers = header
+    merged_header = {}
+    merged_header.update(header)
+    if custom_header is not None:
+        merged_header.update(custom_header)
+    session.headers = merged_header
+    result = None
     try:
         res = session.get(fetch_url)
-        return res.text
+        result = res.text
+        session.close()
     except Exception as e:
         print('base request fetch error ', e)
-        return None
+    finally:
+        return result
