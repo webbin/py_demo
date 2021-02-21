@@ -18,7 +18,7 @@ def main(argv):
     timestamp = 0
     humidity = 0
     try:
-        opts, args = getopt.getopt(argv, "", ['tm=', "hu=", "tr="])
+        opts, args = getopt.getopt(argv, "-s:-r", ['tm=', "hu=", "tr="])
 
     except getopt.GetoptError as e:
         print(str(e))

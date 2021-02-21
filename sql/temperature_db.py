@@ -13,10 +13,12 @@ from sql.BaseTableTool import BaseTableTool
 
 
 class TemperatureDBUtil(BaseTableTool):
-    def select(self, table: str, cols='*', where=''):
+    # def __init__(self, file_path):
+    #     super().__init__(file_path)
+
+    def select(self, cols='*', where=''):
         """
             查询
-            :param table: 表名
             :param cols: 查询列
             :param where: 查询条件
             :return: 查询结果
@@ -26,7 +28,7 @@ class TemperatureDBUtil(BaseTableTool):
         cursor = self.cursor
         try:
             where = 'WHERE ' + where if where else ''
-            sql_select = '''SELECT {1} FROM {0} {2}'''.format(table, cols, where)
+            sql_select = '''SELECT {0} FROM temperature {1}'''.format(cols, where)
             # print(sql_select)
             cursor.execute(sql_select)
             values = cursor.fetchall()

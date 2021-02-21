@@ -9,6 +9,7 @@ import json
 #  &owner_only=0&sort_filter=hot&os_type=web&version=999.0.0&hkey=691cff770b248479aafa863cc0ba4a78
 #  &_time=1584437395
 
+from base import base_requests
 
 link_tree_path = '/bbs/app/link/tree'
 
