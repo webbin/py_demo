@@ -2,7 +2,6 @@ import os
 import sys
 
 cwd = os.getcwd()
-
 splits = cwd.split(os.sep)
 splits.pop()
 parent_path = '/'.join(splits)
