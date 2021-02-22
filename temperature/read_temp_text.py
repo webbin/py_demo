@@ -41,4 +41,4 @@ def read_temp_text():
     database_util.close_connection()
 
 
-read_temp_text()
+# read_temp_text()
