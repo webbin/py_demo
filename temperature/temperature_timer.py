@@ -21,7 +21,8 @@ def record_temperature_task(util: TemperatureDBUtil, schedule: sched.scheduler, 
     data = DHT22.read_dht22()
     humidity = float(data['humidity'])
     temperature = float(data['temperature'])
-    timestamp = time.time()
+    timestamp = int(time.time())
+    # print(timestamp)
     util.insert_temperature(timestamp, temperature, humidity)
     schedule.enter(duration, 0, record_temperature_task, (util, schedule, duration))
 

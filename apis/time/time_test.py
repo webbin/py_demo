@@ -16,7 +16,7 @@ def show_timestruct(t):
 def show_time():
     mil_sec = time.time()
     t1 = time.gmtime(mil_sec)
-    print('gm time ')
+    # print('gm time ', mil_sec, int(mil_sec))
     show_timestruct(t1)
     print('local time -----')
     local_time = time.localtime(mil_sec)
