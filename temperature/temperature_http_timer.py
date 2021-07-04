@@ -15,8 +15,8 @@ from temperature import DHT22
 
 def read_temperature_data():
     data = DHT22.read_dht22()
-    humidity = float(data['humidity'])
-    temperature = float(data['temperature'])
+    humidity = round(float(data['humidity']), 2)
+    temperature = round(float(data['temperature']), 2)
     timestamp = int(time.time())
     return {
         'temperature': temperature,
