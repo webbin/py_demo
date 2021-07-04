@@ -26,18 +26,18 @@ def read_temperature_data():
 
 
 def record_temperature_task(schedule: sched.scheduler, duration):
+    temperature_data = read_temperature_data()
+    print('temperature data = ', temperature_data)
     schedule.enter(duration, 0, record_temperature_task, (schedule, duration))
 
 
 def main():
-    temperature_data = read_temperature_data()
-    print('temperature data = ', temperature_data)
-    # print('main')
     # 时间间隔 秒数
     duration = 1
     # duration = 60 * 10
     schedule = sched.scheduler(time.time, time.sleep)
     schedule.enter(0, 0, record_temperature_task, (schedule, duration))
+    schedule.run()
 
 
 if __name__ == '__main__':
